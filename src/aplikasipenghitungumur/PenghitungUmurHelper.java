@@ -47,7 +47,7 @@ public String getDayOfWeekInIndonesian(LocalDate date) {
         case FRIDAY -> "Jumat";
         case SATURDAY -> "Sabtu";
         case SUNDAY -> "Minggu";
-        default -> "";
+        default -> " ";
     };
 }
 

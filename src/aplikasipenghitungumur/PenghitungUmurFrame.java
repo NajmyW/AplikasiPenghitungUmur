@@ -233,7 +233,7 @@ public class PenghitungUmurFrame extends javax.swing.JFrame {
         });
             peristiwaThread.start();
 }else {
-            JOptionPane.showMessageDialog(null, "Format tanggal tidak valid!", "Kesalahan Format", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Format tanggal tidak valid!!!", "Kesalahan Format", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_btnHitungActionPerformed
     
     }
