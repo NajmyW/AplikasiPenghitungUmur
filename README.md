@@ -54,8 +54,3 @@ Sebelum memulai, pastikan Anda telah menginstal:
 4. Jalankan proyek menggunakan tombol "Run" di NetBeans.
 
 ---
-
-## ERROR TERJEMAHAN
-Terjadi kesalahan terjemahan karena batas permintaan ke API telah tercapai. Mohon untuk tidak mengirimkan terlalu banyak permintaan dalam waktu singkat. Cobalah untuk mengurangi jumlah permintaan atau berikan jeda waktu di antara setiap permintaan.
-
----
