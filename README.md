@@ -53,8 +53,6 @@ Sebelum memulai, pastikan Anda telah menginstal:
 3. Pastikan semua dependensi telah terpasang dengan benar.
 4. Jalankan proyek menggunakan tombol "Run" di NetBeans.
 
-Berikut adalah versi perbaikan dari kalimat pemberitahuan yang Anda berikan:
-
 ---
 
 ## ERROR TERJEMAHAN
