@@ -35,6 +35,7 @@ Sebelum memulai, pastikan Anda telah menginstal:
 - **Apache NetBeans 23**
 - **JDK versi 23**
 - **JCalendar** (untuk menggunakan komponen JDateChooser)
+- JSON-Java (untuk menggunakan API Eksternal)
 
 ## Cara Menggunakan
 1. Buka Apache NetBeans dan buat proyek Java baru.
