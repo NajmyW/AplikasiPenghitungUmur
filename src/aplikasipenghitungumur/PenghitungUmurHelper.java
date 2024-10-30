@@ -37,6 +37,43 @@ ulangTahunBerikutnya = ulangTahunBerikutnya.plusYears(1);
 return ulangTahunBerikutnya;
 }
 
+private String translateToIndonesian(String text) {
+    try {
+        String urlString = "https://lingva.ml/api/v1/en/id/" +
+            text.replace(" ", "%20");
+        var url = new URL(urlString);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.setRequestProperty("User-Agent", "Mozilla/5.0");
+
+        // Tambahkan delay 2000 ms (2 detik) sebelum mengirim permintaan, untuk mengatasi limit request sekaligus
+        Thread.sleep(2000);
+
+        int responseCode = conn.getResponseCode();
+        if (responseCode != 200) {
+            throw new Exception("HTTP response code: " + responseCode);
+        }
+        StringBuilder content;
+        try (BufferedReader in = new BufferedReader(
+                new InputStreamReader(conn.getInputStream(), "utf-8"))) {
+            String inputLine;
+            content = new StringBuilder();
+            while ((inputLine = in.readLine()) != null) {
+                content.append(inputLine);
+            }
+        }
+        conn.disconnect();
+        JSONObject json = new JSONObject(content.toString());
+        return json.getString("translation");
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt(); // handle the interrupt properly
+        return text + " (Interrupted)";
+    } catch (Exception e) {
+        return text + " (Failed to translate)";
+    }
+}
+
+
 // Menerjemahkan teks hari ke bahasa Indonesia
 public String getDayOfWeekInIndonesian(LocalDate date) {
     return switch (date.getDayOfWeek()) {
@@ -99,7 +136,7 @@ return;
 JSONObject event = events.getJSONObject(i);
 String year = event.getString("year");
 String description = event.getString("description");
-String peristiwa = year + ": " + description;
+String peristiwa = year + ": " + translateToIndonesian(description);
 javax.swing.SwingUtilities.invokeLater(() ->
 txtAreaPeristiwa.append(peristiwa + "\n"));
 }
