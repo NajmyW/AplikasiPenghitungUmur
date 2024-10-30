@@ -52,3 +52,12 @@ Sebelum memulai, pastikan Anda telah menginstal:
 2. Buka proyek menggunakan **Apache NetBeans**.
 3. Pastikan semua dependensi telah terpasang dengan benar.
 4. Jalankan proyek menggunakan tombol "Run" di NetBeans.
+
+Berikut adalah versi perbaikan dari kalimat pemberitahuan yang Anda berikan:
+
+---
+
+## ERROR TERJEMAHAN
+Terjadi kesalahan terjemahan karena batas permintaan ke API telah tercapai. Mohon untuk tidak mengirimkan terlalu banyak permintaan dalam waktu singkat. Cobalah untuk mengurangi jumlah permintaan atau berikan jeda waktu di antara setiap permintaan.
+
+---
