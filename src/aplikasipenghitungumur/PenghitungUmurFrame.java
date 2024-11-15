@@ -4,8 +4,6 @@
  */
 package aplikasipenghitungumur;
 
-import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -119,6 +117,8 @@ public class PenghitungUmurFrame extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(15, 15, 16, 15);
         jPanel1.add(btnKeluar, gridBagConstraints);
+
+        txtUmur.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -127,6 +127,8 @@ public class PenghitungUmurFrame extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(15, 15, 16, 15);
         jPanel1.add(txtUmur, gridBagConstraints);
+
+        txtHariUlangTahunBerikutnya.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -173,7 +175,7 @@ public class PenghitungUmurFrame extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.NORTH);
 
-        jPanel4.setLayout(new java.awt.GridLayout());
+        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
 
         txtAreaPeristiwa.setColumns(20);
         txtAreaPeristiwa.setRows(20);
